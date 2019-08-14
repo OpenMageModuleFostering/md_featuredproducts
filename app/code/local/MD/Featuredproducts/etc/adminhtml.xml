@@ -7,11 +7,9 @@
                     <sort_order>1</sort_order>
                     <action>adminhtml/featured/index</action>
                 </featuredproduct>
-
             </children>
         </catalog>
     </menu>
-
     <acl>
         <resources>
             <admin>
