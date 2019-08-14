@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <md module="featuredproducts">
+            <label>Mage-Designer</label>
+            <sort_order>110</sort_order>
+        </md>
+    </tabs>
+    <sections>
+        <featuredproducts translate="label" module="featuredproducts">
+            <class>separator-top</class>
+            <label>Featured Products</label>
+            <tab>md</tab>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<enable_featuredproducts translate="label">
+                            <label>Enable Featured Products</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_featuredproducts>								
+						<enable_onepage translate="label">
+                            <label>Enable One Columns</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_onepage>							
+						<enable_rightpage translate="label">
+                            <label>Enable 2 Columns Right</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_rightpage>								
+						<enable_threepage translate="label">
+                            <label>Enable 3 Columns</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_threepage>								
+						<enable_leftpage translate="label">
+                            <label>Enable 2 Columns Left</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>
+								<![CDATA[<script>
+								$('featuredproducts_general_enable_onepage').observe('change', function() {
+									
+									if($('featuredproducts_general_enable_onepage').value==1){
+										$('featuredproducts_general_enable_rightpage')[1].selected = true;
+										$('featuredproducts_general_enable_leftpage')[1].selected = true;
+										$('featuredproducts_general_enable_threepage')[1].selected = true;
+									}
+								});
+								$('featuredproducts_general_enable_rightpage').observe('change', function() {
+									
+									if($('featuredproducts_general_enable_rightpage').value==1){
+										$('featuredproducts_general_enable_onepage')[1].selected = true;
+										$('featuredproducts_general_enable_leftpage')[1].selected = true;
+										$('featuredproducts_general_enable_threepage')[1].selected = true;
+									}
+								});
+								$('featuredproducts_general_enable_leftpage').observe('change', function() {
+									
+									if($('featuredproducts_general_enable_leftpage').value==1){
+										$('featuredproducts_general_enable_rightpage')[1].selected = true;
+										$('featuredproducts_general_enable_onepage')[1].selected = true;
+										$('featuredproducts_general_enable_threepage')[1].selected = true;
+									}
+								});
+								$('featuredproducts_general_enable_threepage').observe('change', function() {
+									
+									if($('featuredproducts_general_enable_threepage').value==1){
+										$('featuredproducts_general_enable_rightpage')[1].selected = true;
+										$('featuredproducts_general_enable_onepage')[1].selected = true;
+										$('featuredproducts_general_enable_leftpage')[1].selected = true;
+									}
+								});
+								</script>]]>
+							</comment>
+                        </enable_leftpage>					
+                        <heading translate="label comment">
+                            <label>Heading</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </heading>
+                        <meta_title translate="label comment">
+                            <label>Meta Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </meta_title>
+
+                        <meta_description translate="label comment">
+                            <label>Meta Description</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </meta_description>
+
+                        <meta_keywords translate="label comment">
+                            <label>Meta Keywords</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </meta_keywords>
+						<number_of_itemsgrid translate="label comment">
+                            <label>Number of items per row of grid</label>
+                            <comment>How many featured products will be showed in per row of grid?</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </number_of_itemsgrid>
+                    </fields>
+                </general>
+            </groups>
+        </featuredproducts>
+    </sections>
+</config>

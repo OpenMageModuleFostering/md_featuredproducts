@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MD_Featuredproducts>
+            <version>0.1.0</version>
+        </MD_Featuredproducts>
+    </modules>
+
+    <global>
+        <blocks>
+            <featuredproducts>
+                <class>MD_Featuredproducts_Block</class>
+            </featuredproducts>
+        </blocks>
+
+        <helpers>
+            <featuredproducts>
+                <class>MD_Featuredproducts_Helper</class>
+            </featuredproducts>
+        </helpers>
+
+        <models>
+            <featuredproducts>
+                <class>MD_Featuredproducts_Model</class>
+            </featuredproducts>
+        </models>
+
+        <resources>
+            <featuredproducts_setup>
+                <setup>
+                    <module>MD_Featuredproducts</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </featuredproducts_setup>
+
+            <featuredproducts_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </featuredproducts_write>
+            <featuredproducts_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </featuredproducts_read>
+        </resources>
+    </global>
+
+    <frontend>
+        <routers>
+            <featuredproducts>
+                <use>standard</use>
+                <args>
+                    <module>MD_Featuredproducts</module>
+                    <frontName>featured-products</frontName>
+                </args>
+            </featuredproducts>
+        </routers>
+        <layout>
+            <updates>
+                <featuredproducts>
+                    <file>md_featuredproducts.xml</file>
+                </featuredproducts>
+            </updates>
+        </layout>
+    </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <featuredproducts before="Mage_Adminhtml">MD_Featuredproducts_Adminhtml</featuredproducts>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <default>
+        <featuredproducts>
+            <general>
+                <heading>Featured Products</heading>
+                <heading_block>Featured Products</heading_block>
+                <meta_title>Featured Products</meta_title>
+                <meta_description>Check out our great collection of Featured products</meta_description>
+                <meta_keywords>featured, products</meta_keywords>
+                <product_sort_by>random</product_sort_by>
+                <number_of_itemsgrid>3</number_of_itemsgrid>
+                <number_of_items>5</number_of_items>
+                <number_of_items_per_row>2</number_of_items_per_row>
+                <layout>two_columns_right</layout>
+            </general>
+        </featuredproducts>
+    </default>
+</config>
