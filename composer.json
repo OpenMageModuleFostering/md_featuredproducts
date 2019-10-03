@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/MD_FeaturedProducts",
+    "name": "OpenMageModuleFostering\/MD_FeaturedProducts",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "Featured Products Extension is the ideal solution for any online shop to get a nice shop interface as well as maximum flexibility and convenience.",
     "authors": [
-    {
-        "name": "OSWorld",
-        "email": "thinhct@mage-designer.com"
-    }
-],
+        {
+            "name": "OSWorld",
+            "email": "thinhct@mage-designer.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
