@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Featured Products Extension is the ideal solution for any online shop to get a nice shop interface as well as maximum flexibility and convenience.
